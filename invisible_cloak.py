@@ -1,9 +1,8 @@
-#### Importing Necessary Libraries ####
+#### Necessary Libraries ####
 
 import numpy as np
 import cv2
 import time
-
 
 # Capturing Webcam Feed
 cap = cv2.VideoCapture(0)
@@ -54,7 +53,7 @@ while(cap.isOpened()):
     res2 = cv2.bitwise_and(img, img, mask = mask2)
     final_output = cv2.addWeighted(res1, 1, res2, 1, 0)
 
-    cv2.imshow('Eureka !!', final_output)
+    cv2.imshow('Eureka !', final_output)
     k = cv2.waitKey(10)
     if k == 27:
         break
